@@ -1,0 +1,15 @@
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "${c3_repo}") {
+                authentication(userName: "${c3_repo_username}", password: "${c3_repo_passwd}")
+            }
+            pom.groupId = "${project_group}"
+            pom.version = "${c3_base_log_version}"
+        }
+    }
+}
+
+dependencies {
+	compile "com.c3.base:c3-base-core:${c3_base_core_version}"
+}

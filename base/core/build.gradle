@@ -1,0 +1,20 @@
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "${c3_repo}") {
+                authentication(userName: "${c3_repo_username}", password: "${c3_repo_passwd}")
+            }
+            pom.groupId = "${project_group}"
+            pom.version = "${c3_base_core_version}"
+        }
+    }
+}
+
+dependencies {
+	compile "net.sf.json-lib:json-lib:${json_lib_version}:jdk15"
+	compile "org.freemarker:freemarker:${freemarker_version}"
+	compile ("org.springframework.boot:spring-boot-starter-web:${spring_boot_version}")
+	compile ("org.springframework.data:spring-data-mongodb:${spring_boot_version}")
+	compile "org.springframework.boot:spring-boot-starter-redis:${spring_boot_version}"
+	compile "com.github.hibernate-redis:hibernate-redis:${hibernate_redis_version}"
+}
