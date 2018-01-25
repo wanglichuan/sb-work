@@ -22,3 +22,8 @@ project(':sb-work-base-core').projectDir = new File(settingsDir, 'base/core')
 include 'sb-work-base-log'
 project(':sb-work-base-log').projectDir = new File(settingsDir, 'base/log')
 
+include 'sb-work-base-log-impl'
+project(':sb-work-base-log-impl').projectDir = new File(settingsDir, 'base/log-impl')
+
+include 'sb-work-base-deploy'
+project(':sb-work-base-deploy').projectDir = new File(settingsDir, 'base/deploy')
